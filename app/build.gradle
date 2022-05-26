@@ -71,4 +71,8 @@ dependencies {
     //system ui controller
     def system_ui_controller_version = "0.24.9-beta"
     implementation "com.google.accompanist:accompanist-systemuicontroller:$system_ui_controller_version"
+
+    implementation "com.google.accompanist:accompanist-pager:0.24.9-beta"
+
+    implementation "com.google.accompanist:accompanist-pager-indicators:0.24.9-beta"
 }

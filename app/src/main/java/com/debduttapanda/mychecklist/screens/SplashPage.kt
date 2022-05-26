@@ -1,22 +1,19 @@
 package com.debduttapanda.mychecklist.screens
 
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.debduttapanda.mychecklist.R
+import com.debduttapanda.mychecklist.viewModels.SplashViewModel
+import com.debduttapanda.mychecklist.ui.theme.typography
 import com.debduttapanda.mychecklist.views.LottieView
 
 @Composable
-fun SplashPage() {
+fun SplashPage(splashViewModel: SplashViewModel) {
     Box(
         modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
@@ -35,9 +32,7 @@ fun SplashPage() {
             )
             Text(
                 stringResource(id = R.string.app_name),
-                //color = colorResource(id = R.color.highlightedTextColor),
-                //fontSize = 24.sp,
-                //style = MaterialTheme.typography.body1
+                style = typography.app_name
             )
         }
     }    

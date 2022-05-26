@@ -1,6 +1,9 @@
 package com.debduttapanda.mychecklist.ui.theme
 
+import androidx.compose.material.Text
 import androidx.compose.material.Typography
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
@@ -11,11 +14,22 @@ import com.debduttapanda.mychecklist.R
 
 
 val fonts = FontFamily(
-    Font(R.font.ds_digi),
+    Font(R.font.montserrat_regular),
     Font(R.font.montserrat_bold, weight = FontWeight.Bold),
     Font(R.font.montserrat_italic, style = FontStyle.Italic),
     Font(R.font.montserrat_bolditalic, weight = FontWeight.Bold, style = FontStyle.Italic),
 )
+
+object typography{
+    val app_name:TextStyle
+    @Composable
+    get(){
+        return TextStyle(
+            fontSize = 24.sp,
+            fontFamily = fonts
+        )
+    }
+}
 // Set of Material typography styles to start with
 val Typography = Typography(
     defaultFontFamily = fonts,
