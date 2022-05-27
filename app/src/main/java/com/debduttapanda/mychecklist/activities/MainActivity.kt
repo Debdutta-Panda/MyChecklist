@@ -36,6 +36,7 @@ class MainActivity : ComponentActivity() {
                     SideEffect {
                         splashViewModel.setNavigator(navController)
                         introViewModel.setNavigator(navController)
+                        addTaskViewModel.setNavigator(navController)
                     }
                     NavHost(navController = navController, startDestination = "splash") {
                         composable("splash") { SplashPage(splashViewModel) }
